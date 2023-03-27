@@ -12,7 +12,7 @@ public class Door {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private Long id;
     private String doorName;
     private String buildCode;
 
@@ -26,7 +26,7 @@ public class Door {
     public Door() {
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public void setDoorName(String doorName) {
@@ -39,7 +39,7 @@ public class Door {
         this.buildings = buildings;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
     public String getDoorName() {

@@ -21,7 +21,7 @@ public class DoorService {
     }
 
     Door save(Door object) {
-        map.put(object, object.getId());
+        map.put(object, String.valueOf(object.getId()));
         return object;
     }
 
