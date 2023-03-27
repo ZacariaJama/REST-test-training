@@ -29,14 +29,14 @@ public class BootStrapData implements CommandLineRunner {
 
         Building building2 = new Building("ITS","Information Technology Services");
         Door door2 = new Door("2nd Floor Entrance", "ITS");
-        door2.getBuildings().add(building1);
+        door2.getBuildings().add(building2);
         building2.getDoors().add(door2);
         doorRepository.save(door2);
         buildingRepository.save(building2);
 
         Building building3 = new Building("TMC","Toldo Medical Center");
         Door door3 = new Door("Left Side Entrance", "TMC");
-        door3.getBuildings().add(building1);
+        door3.getBuildings().add(building3);
         building3.getDoors().add(door3);
         doorRepository.save(door3);
         buildingRepository.save(building3);
