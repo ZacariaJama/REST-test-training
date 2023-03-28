@@ -1,5 +1,6 @@
 package com.example.KeyPrototype.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
@@ -17,6 +18,7 @@ public class Door {
     private String buildCode;
 
     @ManyToMany(mappedBy = "doors")
+    @JsonIgnore
     private Set<Building> buildings = new HashSet<>();
 
     public Door(String doorName, String buildCode) {
