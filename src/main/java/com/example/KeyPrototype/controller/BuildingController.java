@@ -18,12 +18,6 @@ public class BuildingController {
         this.buildingRepository = buildingRepository;
     }
 
-    @RequestMapping("/buildings")
-    public String getBuilding(Model model) {
-        model.addAttribute("buildings", buildingRepository.findAll());
-        return "buildings";
-    }
-
     @GetMapping("/buildings/")
     ResponseEntity<List<Building>> getBuildings() {
         Iterable<Building> buildings = buildingRepository.findAll();

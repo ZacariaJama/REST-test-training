@@ -44,21 +44,5 @@ public class BootStrapData implements CommandLineRunner {
         building3.getDoors().add(door3);
         doorRepository.save(door3);
         buildingRepository.save(building3);
-
-        //door2.getBuildings().add(building1);
-        //door3.getBuildings().add(building1);
-        //building1.getDoors().add(door2);
-        //building1.getDoors().add(door3);
-
-        //doorRepository.save(door2);
-        //doorRepository.save(door3);
     }
-
-    /*
-        server.port=8080
-        spring.h2.console.enabled=true
-        spring.security.user.name=user
-        spring.security.user.password=password
-        spring.security.user.roles=manager
-     */
 }
