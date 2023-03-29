@@ -22,7 +22,7 @@ public class DoorController {
 
     @GetMapping(value = "/doors/{id}")
     public ResponseEntity<List<Door>> getBuildings(@PathVariable("id") String id) {
-        Optional<Door> doors = doorRepository.findByBuildCode(id.toUpperCase());
+        List<Door> doors = doorRepository.findAllByBuildCode(id.toUpperCase());
         List<Door> doorList = doors.stream().toList();
         return ResponseEntity.ok(doorList);
     }
