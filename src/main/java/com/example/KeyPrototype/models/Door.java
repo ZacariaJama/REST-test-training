@@ -17,9 +17,9 @@ public class Door {
     private String doorName;
     private String buildCode;
 
-    @ManyToMany(mappedBy = "doors")
+    @ManyToOne
     @JsonIgnore
-    private Set<Building> buildings = new HashSet<>();
+    private Building buildings;
 
     public Door(String doorName, String buildCode) {
         this.doorName = doorName;
@@ -37,7 +37,7 @@ public class Door {
     public void setBuildCode(String buildCode) {
         this.buildCode = buildCode;
     }
-    public void setBuildings(Set<Building> buildings) {
+    public void setBuildings(Building buildings) {
         this.buildings = buildings;
     }
 
@@ -50,7 +50,7 @@ public class Door {
     public String getBuildCode() {
         return buildCode;
     }
-    public Set<Building> getBuildings() {
+    public Building getBuildings() {
         return buildings;
     }
 

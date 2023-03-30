@@ -25,13 +25,13 @@ public class BootStrapData implements CommandLineRunner {
         Door door11 = new Door("Main Entrance", "UCC");
         Door door12 = new Door("1rst Floor Entrance", "UCC");
         Door door13 = new Door("2nd Floor Entrance", "UCC");
-        door11.getBuildings().add(building1);
+        door11.setBuildCode(building1.getBuildCode());
         building1.getDoors().add(door11);
         doorRepository.save(door11);
-        door12.getBuildings().add(building1);
+        door12.setBuildCode(building1.getBuildCode());
         building1.getDoors().add(door12);
         doorRepository.save(door12);
-        door13.getBuildings().add(building1);
+        door13.setBuildCode(building1.getBuildCode());
         building1.getDoors().add(door13);
         doorRepository.save(door13);
 
@@ -40,10 +40,10 @@ public class BootStrapData implements CommandLineRunner {
         Building building2 = new Building("ITS","Information Technology Services");
         Door door21 = new Door("2nd Floor Entrance", "ITS");
         Door door22 = new Door("Main Entrance", "ITS");
-        door21.getBuildings().add(building2);
+        door21.setBuildCode(building2.getBuildCode());
         building2.getDoors().add(door21);
         doorRepository.save(door21);
-        door22.getBuildings().add(building2);
+        door22.setBuildCode(building2.getBuildCode());
         building2.getDoors().add(door22);
         doorRepository.save(door22);
 
@@ -55,19 +55,19 @@ public class BootStrapData implements CommandLineRunner {
         Door door33 = new Door("2nd Floor Entrance", "TMC");
         Door door34 = new Door("Main Entrance", "TMC");
         Door door35 = new Door("3rd Floor Emergency Entrance", "TMC");
-        door31.getBuildings().add(building3);
+        door31.setBuildCode(building3.getBuildCode());
         building3.getDoors().add(door31);
         doorRepository.save(door31);
-        door32.getBuildings().add(building3);
+        door32.setBuildCode(building3.getBuildCode());
         building3.getDoors().add(door32);
         doorRepository.save(door32);
-        door33.getBuildings().add(building3);
+        door33.setBuildCode(building3.getBuildCode());
         building3.getDoors().add(door33);
         doorRepository.save(door33);
-        door34.getBuildings().add(building3);
+        door34.setBuildCode(building3.getBuildCode());
         building3.getDoors().add(door34);
         doorRepository.save(door34);
-        door35.getBuildings().add(building3);
+        door35.setBuildCode(building3.getBuildCode());
         building3.getDoors().add(door35);
         doorRepository.save(door35);
 
@@ -76,10 +76,10 @@ public class BootStrapData implements CommandLineRunner {
         Building building4 = new Building("CAW","Community Student Center");
         Door door41 = new Door("Right Entrance", "CAW");
         Door door42 = new Door("Left Entrance", "CAW");
-        door41.getBuildings().add(building4);
+        door41.setBuildCode(building4.getBuildCode());
         building4.getDoors().add(door41);
         doorRepository.save(door41);
-        door42.getBuildings().add(building4);
+        door42.setBuildCode(building4.getBuildCode());
         building4.getDoors().add(door42);
         doorRepository.save(door42);
 

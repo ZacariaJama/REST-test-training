@@ -1,5 +1,6 @@
 package com.example.KeyPrototype.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -13,9 +14,8 @@ public class Building {
     private String buildCode;
     private String buildName;
 
-    @ManyToMany
-    @JoinTable(name = "buildings_doors", joinColumns = @JoinColumn(name = "doors_id"),
-            inverseJoinColumns = @JoinColumn(name = "buildings_id"))
+    @OneToMany(mappedBy = "buildings")
+    @JsonIgnore
     private Set<Door> doors = new HashSet<>();
 
     public Building(String buildCode, String buildName){
